@@ -6,7 +6,8 @@ services:
   - docker
 
 before_install:
-  - sudo docker run rjarnold/docker_ing_for_ci:version_1
+  - sudo docker pull rjarnold/build --tag=docker_img_for_ci
+  - sudo docker run -i -t docker_ing_for_ci
 
 script:
   - pytest
