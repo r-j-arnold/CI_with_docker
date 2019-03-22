@@ -9,4 +9,4 @@ before_install:
   - sudo docker build --tag=docker_img_for_ci .
 
 script:
-  - sudo docker run -t docker_img_for_ci pytest
+  - sudo docker run -t docker_img_for_ci $pytest
